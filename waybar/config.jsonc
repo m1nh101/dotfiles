@@ -1,0 +1,87 @@
+{
+	"layer": "top",
+	"position": "top",
+	"height": 30,
+	"spacing": 16,
+	"margin-top": 8,
+	"modules-left": [
+		"hyprland/workspaces",
+		"hyprland/window",
+		"tray"
+	],
+	"modules-center": [
+		
+	],
+	"modules-right": [
+		"network",
+		"pulseaudio",
+		"battery",
+		"clock",
+	],
+	"hyprland/window": {
+		"format": " {initialClass}"
+	},
+	"hyprland/workspaces": {
+		"format": "{icon}",
+		"format-icons": {
+			"1": "",
+			"2": "",
+			"3": "",
+			"default": "",
+			//"active": ""
+		},
+		"persistent-workspaces": {
+			"*": 3
+		}
+	},
+	"tray": {
+		"spacing": 4,
+		"icon-size": 16
+	},
+	"network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        	"format-wifi": "  {essid}",
+        	"format-ethernet": "{ipaddr}/{cidr} ",
+        	"tooltip-format": "{ifname} via {gwaddr} ",
+        	"format-linked": "{ifname} (No IP) ",
+        	"format-disconnected": "󰖪 ",
+        	"format-alt": "{ifname}: {ipaddr}/{cidr}"
+    	},
+    	"pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        	"format": "{volume}% {icon} {format_source}",
+        	"format-bluetooth": "{volume}% {icon} {format_source}",
+        	"format-bluetooth-muted": " {icon} {format_source}",
+        	"format-muted": " {format_source}",
+        	"format-source": "{volume}% ",
+        	"format-source-muted": "",
+        	"format-icons": {
+            		"headphone": "",
+            		"hands-free": "",
+           		"headset": "",
+            		"phone": "",
+            		"portable": "",
+            		"car": "",
+            		"default": ["", "", ""]
+		},
+        	"on-click": "pavucontrol"
+    	},
+	"battery": {
+		"bat": "BAT0",
+		"adapter": "AC0",
+		"states": {
+			"warming": 30,
+			"critical": 15
+		},
+		"format": "{icon} {capacity}%",
+		"format-icons": {
+			"default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+			"charging": ["󰂄"]
+		}
+	},
+	"clock": {
+		"interval": 1,
+		"format": "{:%H:%M:%S}",
+		"timezone": "Asia/Saigon"
+	}
+}

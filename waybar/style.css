@@ -1,0 +1,61 @@
+* {
+	color: white;
+	font-family: 'Iosevka Nerd Font';
+}
+
+
+window#waybar {
+	background: transparent;
+}
+
+.modules-left {
+	margin-left: 16px;
+}
+
+.modules-right {
+	padding: 5px 16px 5px 16px;
+	border-radius: 8px;
+	border: 2px solid white;
+	margin-right: 16px;
+}
+
+#workspaces {
+	border: 2px solid white;
+	background: rgba(255, 255, 255, 0.15);
+	padding: 0 5px 2px 5px;
+	border-radius: 8px;
+}
+
+#workspaces button {
+	color: white;
+	background: transparent;
+	outline: none;
+	border-radius: 0px;
+	border: none;
+	box-shadow: none;
+	padding-right: 12px;
+}
+
+#workspaces button:hover {
+	box-shadow: none;
+	border-bottom-style: solid;
+	border-bottom-color: green;
+	border-bottom-width: 3px;
+	color: blue;
+}
+
+#workspaces button.active {
+	border: none;
+	border-bottom-style: solid;
+	border-bottom-color: green;
+	border-bottom-width: 3px;
+	color: blue;
+}
+
+#window {
+	padding-left: 16px;
+	padding-right: 16px;
+	border-radius: 8px;
+	border: 2px solid white;
+	background: rgba(255, 255, 255, 0.1);
+}
